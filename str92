@@ -1,0 +1,47 @@
+public class LogicalOpTable {
+    public static void main(String[] args) {
+        boolean p, q;
+        int x;
+        int y;
+        int a;
+
+        System.out.println("P\tQ\tAND\tOR\tXOR\tNOT");
+
+        p = true; q = true;
+        x = 1; y = 1;
+        System.out.print(x +"\t" + y + "\t");
+        System.out.print((x&y) + "\t" + (x|x) + "\t");
+        if(x == y) {
+            a = 0;
+            System.out.println((x^y) + "\t" + a);
+        }
+
+        p = true; q = false;
+        x = 1; y = 0;
+        System.out.print(x + "\t" + y + "\t");
+        System.out.print((x&y) + "\t" + (x|y) + "\t");
+        if(x > y) {
+            a = 0;
+            System.out.println((x^y) + "\t" + a);
+        }
+
+        p = false; q = true;
+        x = 0; y = 1;
+        System.out.print(x + "\t" + y + "\t");
+        System.out.print((x&y) + "\t" + (x|y) + "\t");
+        if(x < y) {
+            a = 1;
+            System.out.println((x^y) + "\t" + a);
+        }
+
+        p = false; q = false;
+        x = 0; y = 0;
+        System.out.print(x + "\t" + y + "\t");
+        System.out.print((x&y) + "\t" + (x|y) + "\t");
+        if(x == y) {
+            a = 1;
+            System.out.println((x^y) + "\t" + a);
+        }
+
+    }
+}
